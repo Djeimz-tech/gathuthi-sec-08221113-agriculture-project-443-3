@@ -109,14 +109,17 @@
             margin: 2.5rem 0;
         }
 
-        .gallery-item {
-            background: var(--light);
-            border-radius: 10px; /* More rounded corners */
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* Softer, larger shadow */
-            transition: var(--transition);
-            border: 1px solid var(--border-color); /* Subtle border */
-        }
+     .gallery-item img {
+    width: 100%;
+    /* Changed height to auto to allow full image height */
+    height: auto;
+    /* Changed object-fit to contain to ensure the entire image is visible within the container */
+    object-fit: contain;
+    display: block;
+    border-bottom: 1px solid var(--border-color); /* Separator for image and text */
+    border-radius-top-left: 10px; /* Keep top border radius */
+    border-radius-top-right: 10px; /* Keep top border radius */
+}
 
         .gallery-item:hover {
             transform: translateY(-8px); /* More pronounced lift effect */
